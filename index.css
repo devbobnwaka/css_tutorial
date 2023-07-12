@@ -1,8 +1,23 @@
-@import url(css/base.css);
+  @import url(css/base.css);
 
 *{
     box-sizing: border-box;
 }
+
+
+.topic-games::before {
+    content: '🎮 ';
+}
+
+.topic-weather::before {
+    content: '⛅ ';
+}
+
+.topic-hot::before {
+    content: counter(chapter_counter, upper-roman);
+    margin-right: 6px;
+}
+
 
 .wrapper{
     border: 1px solid crimson;
