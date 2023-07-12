@@ -1,0 +1,41 @@
+/* DESKTOP FIRST APPROACH */
+/* Put your reset styles here */
+/* Put styles for desktop and basic styles for all devices here */
+body {
+    /* properties for body here */
+   }
+   /* medium display only */
+   @media (min-width: 481px) and (max-width:768px) {
+    body {
+    /* properties that only apply to tablets */
+    }
+
+   }
+   /* small display only */
+   @media (max-width:480px) {
+    body {
+    /* properties that only apply to phones */
+    }
+}
+
+
+
+
+/* MOBILE FIRST APPROACH */
+/* Put your reset styles here */
+/* Put styles for mobile and basic styles for all devices here*/
+body {
+    /* properties for body here */
+   }
+   /* medium display only */
+   @media (min-width: 481px) and (max-width:768px) {
+    body {
+    /* properties that only apply to tablets */
+    }
+   }
+   /* large display only */
+   @media (min-width:769px) {
+    body {
+    /* properties that only apply to phones */
+    }
+   }

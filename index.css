@@ -1,0 +1,129 @@
+@import url(css/base.css);
+
+*{
+    box-sizing: border-box;
+}
+
+.wrapper{
+    border: 1px solid crimson;
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    position: relative;
+}
+
+.wrapped1{
+    border: 1px solid crimson;
+    height: 50px;
+    width: 40px;
+    background-color: blue;
+    position: relative;
+    top: 20px;
+}
+
+.wrapped2{
+    border: 1px solid crimson;
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    position: relative;
+    z-index: 1   ;
+}
+
+.layout{
+    border: 1px solid crimson;
+    height: 100px;
+    width: 100px;
+}
+
+.layout:not(.layout:first-child):hover{
+    transform: rotate(10deg);
+    transform: scale(2, 1);
+    transform: translate(20px,0px);
+    transform: skew(45deg, 0);
+    /* Multiple transformation */
+    transform: skew(5deg,0deg) scale(.5) translate(20px,5px) rotate(90deg);
+    transform-origin: left top;
+}
+
+/* Adding a Transition */
+.layout:first-child{
+    background-color: orange;
+    /* transition-property: background-color;
+    transition-duration: 1s; */
+    transition-property: color, background-color, border-color;
+    transition-duration: .25s, .75s, 2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: .5s;
+    /* Transition Shorthand - transition-property, transition-duration, transition-timing-function, and transition-delay */
+    transition: all 1s ease-in .5s;
+}
+
+.layout:first-child:hover{
+    background-color: blue;
+    border-color: green;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growAndGlow {
+    from {
+    background-color: yellow;
+    animation-timing-function: cubic-bezier(1, .03, 1, .115);
+    }
+    50% {
+    transform: scale(1.5);
+    background-color: blue;
+    animation-timing-function: linear;
+    }
+    to {
+    transform: scale(3);
+    background-color: red;
+    }
+   }
+
+.animi {
+    border: 1px solid blue;
+    height: 100px;
+    width: 100px;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+div.animi{
+    animation-name: growAndGlow;
+    animation-duration: .25s;
+    animation-iteration-count: 10;
+    animation-direction: alternate;
+    /* animation-iteration-count: infinite; */
+
+    /* ANIMINATION SHORTHAND */
+    /* animation: fadeOut 2s ease-in-out 5s 2 alternate forwards; */
+}
+
+table{
+    border-spacing: 1px;
+    border-collapse: collapse;
+}
+
+td, th { padding: 10px; }
+
+td {
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    /* multiple padding */
+    padding: 10px 5px 3px 5px;
+}
+
+tr:nth-of-type(odd) { background-color: red; }
+tr:nth-of-type(even) { background-color: blue; }
