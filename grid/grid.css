@@ -82,8 +82,7 @@
         "footer footer footer"
     ; */
     
-    
-    /* USE MEDIA QUERIES TO CREATE RESPONSIVE LAYOUTS */
+
 }
 
 
@@ -98,6 +97,7 @@
     grid-gap: 10px 10px;
 }
 
+/* USE MEDIA QUERIES TO CREATE RESPONSIVE LAYOUTS */
 .container3{
     font-size: 1.5em;
     min-height: 300px;
@@ -113,6 +113,22 @@
         "content"
         "footer"
         ;
+}
+    /* CREATE GRIDS WITHIN GRIDS */
+.content{
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.content h5{
+    background-color: rgb(204, 114, 114);
+}
+.p1{
+    background-color: bisque;
+}
+ 
+.p2{
+    background-color: azure;
 }
 
 @media (min-width: 300px){
