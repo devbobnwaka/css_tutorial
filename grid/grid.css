@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.d1{background-color: lightblue;}
+.d2{background-color: lightsalmon;}
+.d3{background-color: paleturquoise;}
+.d4{background-color: lightpink;}
+.d5{background-color: palegreen;}
+
+
+.container{
+    font-size: 40px;
+    width: 100%;
+    background-color: lightgray;
+    /* GRID */
+    display: grid; /*   Create grid */
+
+    /* Add 3 columns with grid-template-coulmns */
+    /* grid-template-columns: 100px 100px 100px; */
+
+    /* Add Rows with grid-template-rows */
+    /* grid-template-rows: 50px 50px; */
+
+    /* Use CSS Grid units to CHange the size of colums and rows */
+    grid-template-columns: 1fr 100px 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    
+    /* Create a Column Gap Using grid-column-gap */
+    /* grid-column-gap: 20px; */
+
+    /* Create a ROw Gap Using grid-row-gap */
+    /* grid-row-gap: 20px; */
+
+    /* Add Gaps Faster with grid-gap */
+    grid-gap: 5px 20px;
+
+    
+}
+
+.d5{
+    /* Use grid-column to Control Spacing */
+    grid-column: 2 / 4;
+    /* Use grid-row to Control Spacing */
+    grid-row: 2 / 4;
+}
