@@ -4,14 +4,37 @@
 }
 
 .d1{background-color: lightblue;}
-.d2{background-color: lightsalmon;}
-.d3{background-color: paleturquoise;}
+.d2{
+    background-color: lightsalmon;
+    /* Align an Item Horizontally using justify-self */
+    /* justify-self: center; */
+}
+.d3{
+    background-color: paleturquoise;
+    /* Align an Item Vertically using align-self */
+    /* align-self: center; */
+}
 .d4{background-color: lightpink;}
-.d5{background-color: palegreen;}
+.d5{
+    background-color: palegreen;
+    /* PLACE ITEMS IN GRID AREAS USING THE grid-area Property */
+    /* grid-area: footer; */
+    /* Use grid-area without Creating an Areas Template */
+    /* grid-area: 3/1/4/4 */
+}
 
+.d5{
+    /* Use grid-column to Control Spacing */
+    /* grid-column: 2 / 4; */
+    /* Use grid-row to Control Spacing */
+    /* grid-row: 2 / 4; */
+    
+    
+}
 
 .container{
     font-size: 40px;
+    min-height: 300px;
     width: 100%;
     background-color: lightgray;
     /* GRID */
@@ -24,9 +47,20 @@
     /* grid-template-rows: 50px 50px; */
 
     /* Use CSS Grid units to CHange the size of colums and rows */
-    grid-template-columns: 1fr 100px 2fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    /* REDUCE REPETITION USING THE REPEAT FUNCTION */
+    grid-template-rows: repeat(3, 1fr);
     
+    /* LIMIT ITEM SIZE USING THE MINMAX FUNCTION */
+    /* grid-template-columns: repeat(3, minmax(60px, 1fr)); */
+    
+    /* CREATE FLEXIBLE LAYOUTS USING AUTO-FILL */
+    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+    /* CREATE FLEXIBLE LAYOUTS USIN AUTO-FIT */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+
     /* Create a Column Gap Using grid-column-gap */
     /* grid-column-gap: 20px; */
 
@@ -34,14 +68,92 @@
     /* grid-row-gap: 20px; */
 
     /* Add Gaps Faster with grid-gap */
-    grid-gap: 5px 20px;
+    grid-gap: 10px 10px;
 
+    /* Align all Item Horizonatally using justify-items */
+    /* justify-items: center; */
+    /* Align all Item Vertically using align-items */
+    /* align-items: center; */
+
+    /* DIVIDE THE GRID INTO AN AREA TEMPLATE */
+    /* grid-template-areas: 
+        "header header header"
+        "advert content content"
+        "footer footer footer"
+    ; */
     
+    
+    /* USE MEDIA QUERIES TO CREATE RESPONSIVE LAYOUTS */
 }
 
-.d5{
-    /* Use grid-column to Control Spacing */
-    grid-column: 2 / 4;
-    /* Use grid-row to Control Spacing */
-    grid-row: 2 / 4;
+
+.container2{
+    font-size: 40px;
+    min-height: 300px;
+    width: 100%;
+    background-color: lightgray;
+    display: grid; /*   Create grid */
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px 10px;
+}
+
+.container3{
+    font-size: 1.5em;
+    min-height: 300px;
+    width: 100%;
+    background-color: lightgray;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 1fr auto;
+    grid-gap: 10px;
+    grid-template-areas: 
+        "header"
+        "advert"
+        "content"
+        "footer"
+        ;
+}
+
+@media (min-width: 300px){
+    .container3{
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-gap: 10px;
+        grid-template-areas: 
+            "advert header"
+            "advert content"
+            "advert footer"
+            ;
+    }
+
+    .advert{
+        grid-area: advert;
+    }
+}
+
+
+@media (min-width: 400px){
+    .container3{
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-gap: 10px;
+        grid-template-areas: 
+            "header header"
+            "advert content"
+            "footer footer"
+            ;
+    }
+
+    .advert{
+        grid-area: advert;
+    }
+
+    .footer{
+        grid-area: footer;
+    }
+
+    .header{
+        grid-area: header;
+    }
 }
