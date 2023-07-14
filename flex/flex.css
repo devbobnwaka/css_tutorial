@@ -16,24 +16,40 @@
 
 #box-1{
     background-color: dodgerblue;
-    width: 100%;
+    /* width: 100%; */
     /* height: 50%; */
     height: 50px;
     /* width: 100px; */
     /* USE THE flex-shrink Property to Shrink Items */
     /* flex-shrink: 1; */
-    /* USE THE flex-grow Property to Expand Items */
-    flex-shrink: 1;
+    /* USE THE flex-basis Property to Set the Initial Size of an Item */
+    flex-basis: 10em;
+
+    /* USE THE flex Shorthand Property */
+    /* flex: 0 1 auto; /* default property settings of flex (flex-grow, flex-shrink, flex-basis) */ 
+    flex: 2 2 150px;
+
+    /* USE THE order Property to Rearrange Items */
+    /* order: 2 */
+
+    /* Use the align-self Property */
 }
 
 #box-2{
     background-color: orangered;
-    width: 100%;
+    /* width: 100%; */
     /* height: 50%; */
     height: 50px;
     /* width: 100px; */
     /* USE THE flex-shrink Property to Shrink Items */
     /* flex-shrink: 2; */
     /* USE THE flex-grow Property to Expand Items */
-    flex-shrink: 1;
+    /* flex-grow: 2; */
+    /* USE THE flex-basis Property to Set the Initial Size of an Item */
+    /* flex-basis: 20em; */
+    /* USE THE flex Shorthand Property */
+    /* flex: 0 1 auto; /* default property settings of flex (flex-grow, flex-shrink, flex-basis) */ 
+    flex: 1 1 150px;
+    /* USE THE order Property to Rearrange Items */
+    /* order: 1 */
 }
