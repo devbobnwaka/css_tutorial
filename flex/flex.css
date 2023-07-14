@@ -33,6 +33,7 @@
     /* order: 2 */
 
     /* Use the align-self Property */
+    align-self: start;
 }
 
 #box-2{
